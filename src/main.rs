@@ -16,6 +16,7 @@ println! ("Marks for each student:");
 println! ("which student's marks would you like to see? (1-5)");
 
 
+
     // Calculate each student's average
    
 
