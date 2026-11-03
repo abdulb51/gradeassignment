@@ -13,8 +13,7 @@ fn main() {
    
 println! ("Marks for each student:");
 
-println! ("which student's marks would you like to see? (1-5)");
-
+println! ("which student's marks would you like to see? (0-4)");
 
 
     // Calculate each student's average
@@ -24,14 +23,14 @@ println! ("which student's marks would you like to see? (1-5)");
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Failed to read line");
  
-println! ("Student {} marks: {:?}", input.trim().parse::<usize>().unwrap_or(0) , marks[input.trim().parse::<usize>().unwrap_or(0)]);
+println! ("Student {} marks: {:?}", input.trim().parse::<usize>().unwrap_or(0) + 1, marks[input.trim().parse::<usize>().unwrap_or(0)]);
 
         let mut total = 0;
     for mark in 0..marks[input.trim().parse::<usize>().unwrap_or(0)].len() {
             total += marks[input.trim().parse::<usize>().unwrap_or(0)][mark];
         }
         let aver = total as f32 / marks[input.trim().parse::<usize>().unwrap_or(0)].len() as f32;
-        println!("Student {} - Average: {}", input.trim().parse::<usize>().unwrap_or(0), aver);
+        println!("Student {} - Average: {}", input.trim().parse::<usize>().unwrap_or(0) + 1, aver);
 
     
 
